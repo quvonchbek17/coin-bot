@@ -1,6 +1,6 @@
 const { Telegraf } = require("telegraf");
 const mongoose = require("mongoose");
-const Users = require("./models/Users"); // Yuqoridagi model
+const Users = require("./models/users"); // Yuqoridagi model
 const dotenv = require("dotenv")
 dotenv.config()
 
@@ -31,8 +31,6 @@ Tap to boost your ${user.coins} coins (Level ${user.level})! 🚀
 bot.start(async (ctx) => {
   const payload = ctx.startPayload;
   const from = ctx.from;
-
-  console.log(payload)
 
   try {
     const existingUser = await Users.findOne({ id: String(from.id) });
