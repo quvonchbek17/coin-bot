@@ -62,7 +62,7 @@ bot.start(async (ctx) => {
         });
         if (referUser) {
           referUser.referredUsers.push(newUser._id);
-          referUser.coins += 10000;
+          referUser.coins = referUser.coins + 10000;
           await referUser.save();
         }
       }
