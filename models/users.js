@@ -7,6 +7,7 @@ const UsersSchema = new mongoose.Schema({
   last_name: String,
   coins: { type: Number, default: 0 },
   level: { type: Number, default: 1 },
+  levelCoins: { type: Number, default: 0 },
   totalTaps: { type: Number, default: 0 },
   energy: { type: Number, default: 1000 },
   energyCapacity: { type: Number, default: 1000 },
